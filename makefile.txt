@@ -1,0 +1,9 @@
+
+# fisier pentru rulare
+all:
+      gcc -o server $(mysql_config --cflags) server.c $(mysql_config --libs)
+      gcc client.c -o client
+
+clean: 
+      rm -f client server
+
